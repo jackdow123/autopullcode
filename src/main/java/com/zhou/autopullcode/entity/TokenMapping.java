@@ -1,6 +1,6 @@
 package com.zhou.autopullcode.entity;
 
-public class Mapping {
+public class TokenMapping {
     private String token;
     private String appname;
 

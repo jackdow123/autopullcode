@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TokenMapDao {
-    List<TokenMapping> findTokenByAppname(@Param("appname") String appname);
+public interface TokenMappingDao {
+    List<TokenMapping> findTokenByAppname(String appname);
 }

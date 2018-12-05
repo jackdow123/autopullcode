@@ -1,26 +1,26 @@
 package com.zhou.autopullcode.service;
 
-import com.zhou.autopullcode.dao.TokenDao;
-import com.zhou.autopullcode.entity.Mapping;
+import com.zhou.autopullcode.dao.TokenMappingDao;
+import com.zhou.autopullcode.entity.TokenMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TokenService {
+public class TokenMappingService {
 
-    private final TokenDao tokenDao;
+    private final TokenMappingDao tokenMappingDao;
 
     @Autowired
-    public TokenService(TokenDao tokenDao) {
-        this.tokenDao = tokenDao;
+    public TokenMappingService(TokenMappingDao tokenMappingDao) {
+        this.tokenMappingDao = tokenMappingDao;
     }
 
 
     public String findTokenByAppname(String appName) {
-        Mapping mapping = tokenDao.findTokenByAppname(appName).get(0);
-        if (mapping == null) {
+        TokenMapping tokenMapping = tokenMappingDao.findTokenByAppname(appName).get(0);
+        if (tokenMapping == null) {
             return "";
         }
-        return mapping.getToken();
+        return tokenMapping.getToken();
     }
 }

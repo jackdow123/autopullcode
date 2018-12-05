@@ -7,6 +7,6 @@
     <select id="findTokenByAppname" parameterType="string" resultType="com.zhou.autopullcode.entity.TokenMapping">
         select token,appname
         from mapping
-        WHERE appname = # [ appname];
+        WHERE appname = #[appname];
     </select>
 </mapper>
